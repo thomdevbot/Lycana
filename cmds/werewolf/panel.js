@@ -10,7 +10,10 @@ module.exports = {
             msg.channel.send({embed: emb}).then(m => {
                 self.timer = setInterval(() => {
                     m.edit({embed: self.getEmbed()}).catch(e => {
-                        if(e.toString().indexOf('Unknown Message') !== -1) {
+                        if(
+                            e.toString().indexOf('Unknown Message') !== -1
+                            || e.toString().indexOf('Unknown Channel') !== -1
+                        ) {
                             clearInterval(self.timer)
                         } else {
                             throwErr(e)
