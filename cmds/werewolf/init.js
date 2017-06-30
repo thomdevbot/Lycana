@@ -171,7 +171,6 @@ module.exports = {
                     ]
                 }]
 
-                msg.channel.send({embed: embMsg(`Les roles : \n${mdj}, ${anim}, ${alive}, ${dead}, ${obs} \nont été créés.`)})
                 setTimeout(()=>{
                     createChannels(channels, () => {
                         msg.channel.send({embed: embMsg([

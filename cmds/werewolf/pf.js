@@ -45,5 +45,19 @@ module.exports = {
             throwErr(e)
         }
         return true
+    },
+
+    load: function() {
+        client.once('ready', () => {
+            client.on('message', m => {
+                var cnf = Config.options.modules.lg
+                var wchn = Do.resolve('channel', cnf.channels.wolfs)
+                if(wchn && m.channel.id === wchn.id) {
+                    client.LG_MODULE.player.pf.forEach(pf => {
+                        pf.send(m.content).catch(throwErr)
+                    })
+                }
+            })
+        })
     }
-};
+}

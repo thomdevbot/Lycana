@@ -1,5 +1,5 @@
 module.exports = {
-    usage: "`<cmd>` : " + __("Rename tout le monde, retire tous les roles."),
+    usage: "`<cmd>` : " + __("Rename tout le monde, retire tous les roles et salons."),
 
     exec: function (msg, values) {
         try {
@@ -27,7 +27,12 @@ module.exports = {
                         setTimeout(() => {
                             removeNN(gms, cb)
                         }, 500)
-                    }).catch(throwErr)
+                    }).catch(e => {
+                        setTimeout(() => {
+                            removeNN(gms, cb)
+                        }, 500)
+                        throwErr(e)
+                    })
                 } else {
                     if(cb) cb()
                 }

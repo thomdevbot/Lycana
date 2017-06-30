@@ -55,5 +55,25 @@ module.exports = {
             throwErr(e)
         }
         return true
+    },
+
+    load: function() {
+        client.on('message', m => {
+            if(m.channel.type === 'dm') {
+                var idx = false
+                client.LG_MODULE.player.cham.forEach((u, i) => {
+                    if(u.id === m.author.id) idx = i
+                })
+                if(idx !== false) {
+                    if(client.LG_MODULE.status.cham) {
+                        var cnf = Config.options.modules.lg
+                        var deadChn = Do.resolve('channel', {'name': cnf.channels.deads, 'type':'text' })
+                        if(deadChn) deadChn.send({embed:
+                            embMsg(m.content).setColor('#111').setAuthor('Un chaman dit:', client.LG_MODULE.roles.Chaman.img)
+                        }).catch(throwErr)
+                    }
+                }
+            }
+        })
     }
-};
+}
