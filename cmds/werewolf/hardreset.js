@@ -23,16 +23,20 @@ module.exports = {
             function removeNN(gms, cb) {
                 var g = gms.shift()
                 if(g) {
-                    g.setNickname("").then(() => {
-                        setTimeout(() => {
-                            removeNN(gms, cb)
-                        }, 500)
-                    }).catch(e => {
-                        setTimeout(() => {
-                            removeNN(gms, cb)
-                        }, 500)
-                        throwErr(e)
-                    })
+                    if(g.nickname) {
+                        g.setNickname("").then(() => {
+                            setTimeout(() => {
+                                removeNN(gms, cb)
+                            }, 500)
+                        }).catch(e => {
+                            setTimeout(() => {
+                                removeNN(gms, cb)
+                            }, 500)
+                            throwErr(e)
+                        })
+                    } else {
+                        removeNN(gms, cb)
+                    }
                 } else {
                     if(cb) cb()
                 }

@@ -8,9 +8,14 @@ module.exports = {
             var self = this
             if(self.timer) clearInterval(self.timer)
             msg.channel.send({embed: emb}).then(m => {
-                var last = emb
                 self.timer = setInterval(() => {
-                    m.edit({embed: self.getEmbed()}).catch(throwErr)
+                    m.edit({embed: self.getEmbed()}).catch(e => {
+                        if(e.toString().indexOf('Unknown Message') !== -1) {
+                            clearInterval(self.timer)
+                        } else {
+                            throwErr(e)
+                        }
+                    })
                 }, 2000)
             }).catch(throwErr)
         } catch(e) {
