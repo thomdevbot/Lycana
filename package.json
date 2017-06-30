@@ -1,0 +1,29 @@
+{
+  "name": "nodebot",
+  "version": "2.0.0",
+  "description": "All-doing Discord bot",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "github:hydrabolt/discord.js",
+    "flat-file-db": "latest",
+    "fs": "latest",
+    "node-opus": "^0.2.2",
+    "opusscript": "^0.0.1",
+    "request": "^2.67.0",
+    "sha1": "latest",
+    "youtube-playlist-info": "latest",
+    "youtube-search": "latest",
+    "ytdl-core": "latest"
+  },
+  "keywords": [
+    "bot",
+    "discord",
+    "music",
+    "command",
+    "module",
+    "nodejs",
+    "nodebot"
+  ],
+  "author": "dayxhep",
+  "license": "MIT"
+}

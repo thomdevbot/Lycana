@@ -1,0 +1,189 @@
+{
+    "token": "",
+    "ytsearch": "",
+    "owner": "",
+    "key": "",
+    "prx": "-",
+    "server": "",
+    "lang":"FR",
+    "bot": {},
+    "displayAuthErrors": true,
+    "debug": false,
+
+    "options": {
+        "redirectPM": false,
+        "defaultVolume": 0.05,
+        "autojoin":"",
+        "cmds":{
+            "blacklist": { "show": false },
+            "clear": { "show": false },
+            "help":{
+                "restricted": {
+                    "all": ["Admin", "LG-MDJ", "LG-Anim"],
+                    "lg_le_village": false,
+                    "lg_les_morts": false,
+                    "lg_les_loups": false
+                },
+                "calldelete": true,
+                "alias": ["aide", "perdu"]
+            },
+            "join":{
+                "show": false,
+                "restricted": {"all":["Admin", "LG-Anim"]},
+                "calldelete": true,
+                "requireVC": false
+            },
+            "leave":{
+                "show": false,
+                "restricted": {"all":["Admin", "LG-Anim"]},
+                "calldelete": true,
+                "requireVC": false
+            },
+            "next":{
+                "show": false,
+                "restricted": {"all":["Admin", "LG-Anim"]},
+                "calldelete": true,
+                "requireVC": false,
+                "alias": ["nx"]
+            },
+            "nowplaying":{
+                "show": false,
+                "restricted": {"all":["Admin", "LG-Anim"]},
+                "calldelete": true,
+                "requireVC": false,
+                "alias": ["np"]
+            },
+            "pause":{
+                "show": false,
+                "restricted": {"all":["Admin", "LG-Anim"]},
+                "calldelete": true,
+                "requireVC": false
+            },
+            "play":{
+                "show": false,
+                "restricted": {"all":["Admin", "LG-Anim"]},
+                "calldelete": true,
+                "requireVC": false,
+                "alias": ["pl"]
+            },
+            "queue":{
+                "show": false,
+                "restricted": {"all":["Admin", "LG-Anim"]},
+                "calldelete": true,
+                "requireVC": false,
+                "alias": ["qu"]
+            },
+            "search":{
+                "show": false,
+                "restricted": {"all":["Admin", "LG-Anim"]},
+                "calldelete": false,
+                "requireVC": false
+            },
+            "stop":{
+                "show": false,
+                "restricted": {"all":["Admin", "LG-Anim"]},
+                "calldelete": true,
+                "requireVC": false
+            },
+            "volume":{
+                "show": false,
+                "restricted": {"all":["Admin", "LG-Anim"]},
+                "calldelete": true,
+                "alias": ["vol"]
+            },
+
+            "add":{
+                "restricted": {"all":["Admin", "LG-MDJ", "LG-Anim"]}
+            },
+            "chaman":{
+                "restricted": {"lg_mdj":["Admin", "LG-MDJ", "LG-Anim"]},
+                "alias": ["cham"]
+            },
+            "counter":{
+                "restricted": {"all":["Admin", "LG-MDJ", "LG-Anim"]}
+            },
+            "day":{
+                "restricted": {"lg_le_village":["Admin", "LG-MDJ", "LG-Anim"]}
+            },
+            "dire":{
+                "restricted": {"lg_les_morts": false}
+            },
+            "distrib":{
+                "restricted": {"lg_mdj":["Admin", "LG-MDJ", "LG-Anim"]}
+            },
+            "embed": {
+                "restricted": false,
+                "calldelete": true
+            },
+            "hardreset":{
+                "show": false,
+                "restricted": {"all":["Admin", "LG-Anim"]},
+                "calldelete": true
+            },
+            "init":{
+                "restricted": {"all":["Admin", "LG-Anim"]},
+                "calldelete": true
+            },
+            "kill":{
+                "restricted": {"lg_le_village":["Admin", "LG-MDJ", "LG-Anim"]},
+                "calldelete": true
+            },
+            "lg":{
+                "restricted": {"lg_mdj":["Admin", "LG-MDJ", "LG-Anim"]}
+            },
+            "night":{
+                "restricted": {"lg_le_village":["Admin", "LG-MDJ", "LG-Anim"]}
+            },
+            "panel":{
+                "restricted": {"lg_mdj":["Admin", "LG-MDJ", "LG-Anim"]}
+            },
+            "parole":{
+                "restricted": {"lg_le_village": false},
+                "calldelete": true
+            },
+            "pf":{
+                "restricted": {"lg_mdj":["Admin", "LG-MDJ", "LG-Anim"]}
+            },
+            "reset":{
+                "restricted": {"all":["Admin", "LG-MDJ", "LG-Anim"]},
+                "calldelete": true
+            },
+            "role":{
+                "restricted": {"lg_le_village": ["Admin", "LG-MDJ", "LG-Anim"], "dm": false},
+                "calldelete": true
+            },
+            "roll":{
+                "restricted": {"lg_le_village": false},
+                "calldelete": true
+            },
+            "util":{
+                "restricted": {"lg_mdj":["Admin", "LG-MDJ", "LG-Anim"]}
+            },
+            "village":{
+                "restricted": {"lg_mdj":["Admin", "LG-MDJ", "LG-Anim"]}
+            },
+            "vote":{
+                "restricted": {"lg_le_village": false},
+                "calldelete": true
+            }
+        },
+        "modules": {
+            "lg":{
+                "channels": {
+                    "wolfs": "lg_les_loups",
+                    "mdj": "lg_mdj",
+                    "village": "lg_le_village",
+                    "deads": "lg_les_morts"
+                },
+                "roles": {
+                    "mdj": "LG-MDJ",
+                    "dead": "LG-Mort",
+                    "alive": "LG-Vivant",
+                    "cursed": "LG-Cursed",
+                    "anim": "LG-Anim",
+                    "obs": "LG-Obs"
+                }
+            }
+        }
+    }
+}
