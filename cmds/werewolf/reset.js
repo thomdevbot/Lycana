@@ -1,7 +1,7 @@
 module.exports = {
     usage: "`<cmd>` : " + __("Rename les joueurs, retire les roles de tous les joueurs."),
 
-    exec: function (Do, msg, values) {
+    exec: function (msg, values) {
         try {
             var cnf = Config.options.modules.lg
             var vivant = Do.resolve("role", cnf.roles.alive)
@@ -11,7 +11,7 @@ module.exports = {
             var anim = Do.resolve("role", cnf.roles.anim)
             var cursed = Do.resolve("role", cnf.roles.cursed)
 
-            if(mort) {
+            if(mort && vivant) {
                 mort.members.forEach((gm,i)=>{
                     gm.removeRole(mort).then(() => {
                         setTimeout(() => {
