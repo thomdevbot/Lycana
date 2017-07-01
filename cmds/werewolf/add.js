@@ -39,7 +39,8 @@ module.exports = {
                     status: {
                         pf: false,
                         wolfs: false,
-                        cham: false
+                        cham: false,
+                        village: true
                     },
                     player: {
                         pf: [],
